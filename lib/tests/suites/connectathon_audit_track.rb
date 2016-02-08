@@ -53,6 +53,7 @@ module Crucible
             }
           }
         }
+        sleep(10) # allow a delay for audit events
         reply = @client.search(FHIR::AuditEvent, options)
         assert_response_ok(reply)
         assert_bundle_response(reply)
@@ -194,6 +195,7 @@ module Crucible
             }
           }
         }
+        sleep(10) # allow a delay for audit events
         reply = @client.search(FHIR::AuditEvent, options)
         assert_response_ok(reply)
         assert_bundle_response(reply)
@@ -331,6 +333,7 @@ module Crucible
             }
           }
         }
+        sleep(10) # allow a delay for audit events
         reply = @client.search(FHIR::AuditEvent, options)
         assert_response_ok(reply)
         assert_bundle_response(reply)
